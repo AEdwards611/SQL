@@ -1,6 +1,6 @@
 # SQL
 SQL Portfolio
-Check out my store database here. Notice I'ce created a store Database,then displayed the database ordered price highest to lowest.
+Check out my store database here. Notice I’ve created a store Database,then displayed the database ordered price highest to lowest.
 CREATE TABLE Home_Decor (id INTEGER Primary Key, item TEXT, quantity INTEGER, aisle INTEGER, Price INTEGER);
 INSERT INTO Home_Decor VALUES (1,"Candles",12, 4,15.00);
 INSERT INTO Home_Decor VALUES (2, "Rugs",6,6,18.00);
