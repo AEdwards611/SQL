@@ -1,0 +1,22 @@
+# SQL
+SQL Portfolio
+Check out my store database here. Notice I'ce created a store Database,then displayed the database ordered price highest to lowest.
+CREATE TABLE Home_Decor (id INTEGER Primary Key, item TEXT, quantity INTEGER, aisle INTEGER, Price INTEGER);
+INSERT INTO Home_Decor VALUES (1,"Candles",12, 4,15.00);
+INSERT INTO Home_Decor VALUES (2, "Rugs",6,6,18.00);
+INSERT INTO Home_Decor VALUES (3,"Pillows", 3,6,13.00);
+INSERT INTO Home_Decor VALUES (4, "Throws", 18,6,24.00);
+INSERT INTO Home_Decor VALUES (5, "Shower_Caddy",9,5,9.00);
+INSERT INTO Home_Decor VALUES (6, "Shower_Mat",8,5,11.00);
+INSERT INTO Home_Decor VALUES (7,"Towels",7,5,12.00);
+INSERT INTO Home_Decor VALUES (8,"Curtains",11,2,30.00);
+INSERT INTO Home_Decor VALUES (9,"Vase",15,4,6.00);
+INSERT INTO Home_Decor VALUES (10,"TV_Stand",8,6,12.00);
+INSERT INTO Home_Decor VALUES (11,"Candle_Holder",22,4,15.00);
+INSERT INTO Home_Decor VALUES (12,"Dish_Mat",18,3,13.00);
+INSERT INTO Home_Decor VALUES (13, "Soap Dishes",3,3,14.00);
+INSERT INTO Home_Decor VALUES (14,"Cushioned_Chair",34,1,111.00);
+INSERT INTO Home_Decor VALUES (15, "Chair_Cushions",53,1,10.00);
+
+SELECT * FROM Home_Decor WHERE Price > 1.00 ORDER BY Price desc;
+SELECT * FROM Home_Decor WHERE Quantity < 10 ORDER By Aisle desc; 
