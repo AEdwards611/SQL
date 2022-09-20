@@ -1,0 +1,35 @@
+#In this SQL code, I'm querying a database that's holding Nexflix data to answer questions about the data.
+
+-- Example query (PostgreSQL)"CharlotteChaze/BreakIntoTech"
+1.How many movie titles are there in the database? (movies only, not tv shows)
+
+SELECT count (*)
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+Where Type= 'Movie';
+
+2.When was the most recent batch of tv shows and/or movies added to the database?
+
+select max(date(date_added))
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info";
+
+3.List all the movies and tv shows in alphabetical order.
+
+select Title
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+Order by title asc;
+
+4.Who was the Director for the movie Bright Star?
+
+Select Director 
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" Titles
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_people" People
+ON titles.Show_id=people.show_id
+Where Titles.title='Bright Star';
+
+5.What is the oldest movie in the database and what year was it made?
+
+Select Title, Release_year 
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+Where type= 'Movie'
+Order By Release_year asc
+LIMIT 1;
