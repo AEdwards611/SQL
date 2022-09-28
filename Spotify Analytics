@@ -1,0 +1,45 @@
+CREATE TABLE FirstData.Spotify
+(
+id integer PRIMARY KEY,
+artist_name varchar NOT NULL,
+track_name varchar NOT NULL,
+track_id varchar NOT NULL,
+popularity integer NOT NULL,
+danceability decimal(4,3) NOT NULL,
+energy decimal(4,3) NOT NULL,
+key integer NOT NULL,
+loudness decimal(5,3) NOT NULL,
+mode integer NOT NULL,
+speechiness decimal(5,4) NOT NULL,
+acousticness decimal(6,5) NOT NULL,
+instrumentalness text NOT NULL,
+liveness decimal(5,4) NOT NULL,
+valence decimal(4,3) NOT NULL,
+tempo decimal(6,3) NOT NULL,
+duration_ms integer NOT NULL,
+time_signature integer NOT NULL 
+);
+
+Select *
+FROM FirstData.Spotify;
+
+SELECT MAX(danceability),artist_name,track_name
+FROM FirstData.Spotify;
+
+SELECT Distinct Popularity,artist_name, Track_name
+FROM FirstData.Spotify
+WHERE Popularity >=90
+Limit 10;
+
+SELECT MAX(Duration_ms) artist_name,Track_name
+FROM FirstData.Spotify;
+
+SELECT Artist_name, Track_name
+FROM FirstData.Spotify
+WHERE TEMPO >=100.00
+AND Popularity >=90
+GROUP BY Artist_name;
+
+SELECT popularity, Artist_name, danceability
+FROM FirstData.Spotify
+WHERE Tempo < 80.00;
